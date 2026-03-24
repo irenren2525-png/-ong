@@ -1,0 +1,33 @@
+-- 足場生成
+playerTab:CreateButton({
+    Name = "足場生成",
+    Callback = function()
+        local char, hum, root = getCharacter()
+        if not root then return end
+
+        local platform = Instance.new("Part")
+        platform.Size = Vector3.new(6, 1, 6)
+        platform.Anchored = true
+        platform.CanCollide = true
+        platform.Color = Color3.fromRGB(255, 200, 0)
+        platform.Material = Enum.Material.Neon
+
+        platform.CFrame = root.CFrame * CFrame.new(0, -3, 0)
+        platform.Parent = workspace
+
+        table.insert(platforms, platform)
+    end
+})
+
+-- 足場削除
+playerTab:CreateButton({
+    Name = "足場削除",
+    Callback = function()
+        for _, p in ipairs(platforms) do
+            if p and p.Parent then
+                p:Destroy()
+            end
+        end
+        table.clear(platforms)
+    end
+})
