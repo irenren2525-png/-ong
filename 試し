@@ -1,0 +1,6 @@
+-- GUI作成
+local playerGui = player:WaitForChild("PlayerGui", 30)
+if not playerGui then
+    warn("PlayerGuiが見つからない")
+    return
+end
