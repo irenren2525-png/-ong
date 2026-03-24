@@ -81,17 +81,4 @@ local PCButton = CreateButton(Frame, "PC", 0.05, Color3.fromRGB(0,200,255))
 local MobileButton = CreateButton(Frame, "IOSまたはAndroid(停止中)", 0.5, Color3.fromRGB(255,0,255))
 
 --================= ボタンクリック処理 =================--
-PCButton.MouseButton1Click:Connect(function()
-    Frame:Destroy()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/huroppar/Cheat/refs/heads/main/Xeno.lua"))()
-end)
 
-MobileButton.MouseButton1Click:Connect(function()
-    Frame:Destroy()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/huroppar/Cheat/refs/heads/main/Delta.lua"))()
-end)
-
-Button.MouseButton1Click:Connect(function()
-    Frame:Destroy()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/BROsaikyou/BloxFruits/refs/heads/main/Top1BuddhaUser"))()
-end)
